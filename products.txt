@@ -1,0 +1,10 @@
+1,Twix,alimentar,ProdTwix,4.5
+2,Snickers,alimentar,ProdSnickers,5
+3,Mars,alimentar,ProdMars,4
+4,Alfers,alimentar,ProdAlfers,7
+5,Kinder,alimentar,ProdKinder,3.5
+6,Pantofi,nealimentar,Adidas,100
+7,Danone,alimentar,ProdDanone,2
+8,Faina,alimentar,Boromir,5
+9,Malai,alimentar,Boromir,6
+10,Sosete,alimentar,Nike,4
