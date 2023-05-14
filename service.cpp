@@ -8,21 +8,21 @@ void Service::adauga_service(const int& id, const string& nume, const string& ti
 	Produs p(id, nume, tip, producator, pret);
 	val.valideaza(p);
 
-	UndoActions.push_back(unique_ptr<UndoAction>{new UndoAdd{ p, repo }});
 	repo.adauga_repo(p);
+	UndoActions.push_back(unique_ptr<UndoAction>{new UndoAdd{ p, repo }});
 }
 
 void Service::modifica_service(const int& id, const string& nume, const string& tip, const string& producator, const double& pret) {
 	Produs p(id, nume, tip, producator, pret);
 	val.valideaza(p);
 	
-	UndoActions.push_back(unique_ptr<UndoAction>{new UndoModify{ cauta_service(p.get_id()), repo }});
 	repo.modifica_repo(p);
+	UndoActions.push_back(unique_ptr<UndoAction>{new UndoModify{ cauta_service(p.get_id()), repo }});
 }
 
 void Service::sterge_service(const int& id) {
-	UndoActions.push_back(unique_ptr<UndoAction>{new UndoRemove{ repo.cauta_repo(id), repo }});
 	repo.sterge_repo(id);
+	UndoActions.push_back(unique_ptr<UndoAction>{new UndoRemove{ repo.cauta_repo(id), repo }});
 }
 
 const Produs& Service::cauta_service(const int& id) const{
